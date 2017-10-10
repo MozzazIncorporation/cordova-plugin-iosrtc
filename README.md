@@ -1,5 +1,12 @@
 # cordova-plugin-iosrtc
 
+To start a new cordova project using iosrtc:
+1. cordova create myApp org.apache.cordova.myApp myApp
+2. cd myapp
+3. cordova plugin add https://github.com/MozzazIncorporation/cordova-plugin-iosrtc.git
+4. npm install xcode
+5. cordova platform add ios
+
 [Cordova](http://cordova.apache.org/) iOS plugin exposing the full [WebRTC W3C JavaScript APIs](http://www.w3.org/TR/webrtc/).
 
 
