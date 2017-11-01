@@ -329,7 +329,7 @@ class PluginRTCPeerConnection : NSObject, RTCPeerConnectionDelegate, RTCSessionD
 
 		let pluginRTCDTMFSender = PluginRTCDTMFSender(
 			rtcPeerConnection: rtcPeerConnection,
-			track: track.rtcMediaStreamTrack,
+			track: track.rtcMediaStreamTrack!,
 			eventListener: eventListener
 		)
 
