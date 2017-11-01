@@ -354,10 +354,15 @@ class iosrtcPlugin : CDVPlugin {
 		}
 
 		self.queue.async { [weak pluginRTCPeerConnection] in
-			pluginRTCPeerConnection!.close()
+			if pluginRTCPeerConnection != nil {
+				pluginRTCPeerConnection!.close()
 
-			// Remove the pluginRTCPeerConnection from the dictionary.
-			self.pluginRTCPeerConnections[pcId] = nil
+				// Remove the pluginRTCPeerConnection from the dictionary.
+				self.pluginRTCPeerConnections[pcId] = nil
+			}
+			else {
+				NSLog("iosrtcPlugin#RTCPeerConnection_close() | ERROR: pluginRTCPeerConnection with pcId=%@ does not exist", String(pcId))
+			}
 		}
 	}
 
