@@ -332,6 +332,7 @@ function onEvent(data) {
 			event.videoWidth = data.size.width;
 			event.videoHeight = data.size.height;
 			this.dispatchEvent(event);
+			this.element.dispatchEvent(event);
 
 			break;
 	}
